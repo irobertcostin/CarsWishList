@@ -1,0 +1,119 @@
+button , input {
+    display: block;
+    
+}
+
+body {
+    font-family: "Audiowide", sans-serif;
+    background-color: rgb(193, 136, 246);
+    padding: 20px;
+}
+
+h1 {
+    /* border: 2px solid red; */
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    /* color: white; */
+    margin-top: 50px;
+}
+
+.container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.new-data {
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    background-color: rgb(75, 10, 136);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.new-data div {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 70%;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: orange;
+    border: none;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.wishlist {
+    /* border: 2px solid red; */
+    margin-top: 10px;
+    width: 95%;
+    background-color: #ffb223;
+    border-radius: 20px;
+    padding: 10px;
+
+    margin-bottom: 20px;
+}
+
+.table-head {
+    text-align: center;
+    border: 5px solid  rgb(75, 10, 136);
+
+}
+
+.table-body {
+    text-align: left;
+}
+
+button:hover {
+    background-color: black;
+    color:#ffb223;
+}
+
+
+.table-head tr th {
+    border: 5px solid  rgb(75, 10, 136);
+}
+
+
+.hide-edit {
+    display: none;
+}
+
+.show-edit {
+    display: block;
+    color: white;
+}
+
+#hide-table-head {
+    border: 0px;
+}
+
+
+main button {
+    border: 0px;
+    outline: none;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars we like</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+<body>
+    
+    <h1>Cars we like</h1>
+
+    <main class="container">
+        <section class="new-data">
+            <div> 
+                <label>Maker</label>
+                <input type="text" class="maker">
+            </div>
+            <div> 
+                <label>Model</label>
+                <input type="text" class="model">
+            </div>
+            <div> 
+                <label>Engine</label>
+                <input type="number" class="engine">
+            </div>
+            <div> 
+                <label>Fuel</label>
+                <input type="text" class="fuel">
+            </div>
+
+        </section>
+
+        <button class="btn">Add new item</button>
+
+        <h2>Wishlist</h2>
+
+        <table class="wishlist">
+            <thead class="table-head">
+                <tr>
+                    <th>Maker</th>
+                    <th>Model</th>
+                    <th>Engine</th>
+                    <th>Fuel</th>
+                    <th id="hide-table-head"></th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <button class="deletion">Delete</button>
+    </main>
+
+
+<script src="./data.js"></script>
+<script src="./functions.js"></script>
+<script src="./app.js"></script>
+
+</body>
+
+
+
+
+
+
+</html>

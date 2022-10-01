@@ -1,0 +1,45 @@
+let cars = [
+{
+        maker:"Audi",
+        model:"A6",
+        engine:3.2,
+        fuel:"gasoline",
+        id: 1
+},
+{
+        maker:"Audi",
+        model:"A8",
+        engine:4.2,
+        fuel:"diesel"
+},
+{
+        maker:"Audi",
+        model:"A5",
+        engine:2.0,
+        fuel:"diesel"
+},
+{
+        maker:"BMW",
+        model:"x5",
+        engine:3.0,
+        fuel:"diesel"
+},
+{
+        maker:"Audi",
+        model:"A5",
+        engine:2.0,
+        fuel:"diesel"
+},
+{
+        maker:"Ford",
+        model:"EDGE",
+        engine:1.6,
+        fuel:"diesel"
+},
+{
+        maker:"Opel",
+        model:"Astra",
+        engine:1.4,
+        fuel:"gasoline"
+}
+]
