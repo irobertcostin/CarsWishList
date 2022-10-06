@@ -4,7 +4,6 @@ let cars = [
         model:"A6",
         engine:3.2,
         fuel:"gasoline",
-        id: 1
 },
 {
         maker:"Audi",

@@ -3,25 +3,35 @@ let btnCreate = document.querySelector(".btn"); //butonul add
 //determinam de sub de element HTML vom face selectia, ne ajutam de clase css
 let selectie = document.querySelector(".table-body")
 let obiectSelectat = ""; //determinam o variabila goala, pentru selectia noastra
-let stocareObiect = ""; // intershimbare
-
-let pozitie = -1;
+let stocareObiect = ""; // interschimbare
 
 
+
+// deletion
 let deletion = document.querySelector(".deletion")
 
+
+//edit 
+let edit=document.querySelector(".edit");
+
+let maker = document.querySelector(".maker");
+let model = document.querySelector(".model");
+let engine = document.querySelector(".engine");
+let fuel = document.querySelector(".fuel");
+
+
+
+
+
+//search
 
 btnCreate.addEventListener("click", () => {
 
     cars.push(getCar());
 
-    // reset inputs 
+    populateTable(cars);
 
-    let inputs = document.querySelectorAll(`.maker , .model , .engine , .fuel`);
-    inputs.forEach(input => {
-        input.value = "";
-    })
-
+    resetRows();
 })
 
 
@@ -29,11 +39,6 @@ btnCreate.addEventListener("click", () => {
 selectie.addEventListener("click", (e) => {
 
     let obiect = e.target 
-    // if(obiect.classList.contains("hide-edit")) {
-    //     obiect.classList.remove("hide-edit");
-    //     obiect.classList.add("show-edit");
-
-    // }
 
     if(obiect.classList.contains("marca")) {
         
@@ -46,6 +51,15 @@ selectie.addEventListener("click", (e) => {
         stocareObiect = obiect;
     }
 
+    let car = getCarByMaker(cars,obiectSelectat);
+    
+    maker.value = car.maker;
+    model.value=car.model;
+    engine.value=car.engine;
+    fuel.value=car.fuel;
+
+
+
 });
 
 
@@ -57,5 +71,22 @@ deletion.addEventListener("click", () => {
 
     populateTable(cars);
 })
+
+edit.addEventListener("click", ()=> {
+
+    let masina = {
+        maker: maker.value,
+        model:model.value,
+        engine:engine.value,
+        fuel:fuel.value
+    }
+
+
+
+
+
+
+})
+
 
 populateTable(cars);

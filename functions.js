@@ -8,8 +8,6 @@ function createRow (obj) {
     <td>${obj.model}</td>
     <td>${obj.engine}</td>
     <td>${obj.fuel}</td>
-    <td class="hide-edi">${cars.indexOf(obj)}</td>
-    <button class="hide-edit">edit</button>
     </tr>
 `
 return text;
@@ -46,7 +44,7 @@ function getCar () {
     let motor = document.querySelector(".engine");
     let combustibil = document.querySelector(".fuel");
 
-    // definim crearea unui obiect, und maker din data.js = maker.value care reprezinta valoarea introdusa 
+    // definim crearea unui obiect, unde maker din data.js = maker.value care reprezinta valoarea introdusa 
     // in elementul selectat
 
     let masina = {
@@ -66,34 +64,18 @@ if (masina.maker !== "" && masina.model !== "" && masina.engine !== "" && masina
 
     if (masina.maker == "") {
         // injectam un element css in IF
-        let sol = document.querySelector(".maker");
-        sol.areaPlaceholder = "Introduceti marca";
-        sol.style.border = "2px solid black";
-        
         erors.push("Introduceti marca");
     } 
 
     if (masina.model == "") {
-        let sol = document.querySelector(".model");
-        sol.areaPlaceholder = "rntroduceti modelul";
-        sol.style.border = "2px solid black";
-        
         erors.push("Introduceti modelul");
     }
 
     if (masina.engine == "" && masina.engine < 0.5) {
-        let sol = document.querySelector(".engine");
-        sol.areaPlaceholder = "Introduceti motorizarea";
-        sol.style.border = "2px solid black";
-        
         erors.push("Introduceti motorizarea");
     }
 
     if (masina.fuel == "") {
-        let sol = document.querySelector(".fuel");
-        sol.areaPlaceholder = "Introduceti tipul de combustibil";
-        sol.style.border = "2px solid black";
-        
         erors.push("Introduceti tipul de combustibil");
     }
 
@@ -117,11 +99,35 @@ for (i=0;i<arr.length;i++) {
     //     nou.push(arr[i]);
     //     // pozitie = arr.indexOf(arr[i]);
     // }
-
     // if (arr.indexOf(arr[i]) == parametru) {
     //     pozitie = arr.indexOf(arr[i]);
     // }
 }
 return nou;
+
+}
+
+
+function resetRows () {
+    maker.value="";
+    model.value="";
+    engine.value="";
+    fuel.value="";
+}
+
+
+function getCarByMaker (arr,maker) {
+    let x= "";
+
+    for (i=0;i<arr.length;i++){
+
+
+        if(arr[i].maker == maker) {
+            x = arr[i];
+        }
+
+    }
+
+    return x;
 
 }
