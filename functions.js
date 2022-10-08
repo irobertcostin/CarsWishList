@@ -91,9 +91,9 @@ function eliminateCar(arr, parametru) {
     let nou = [];
 
 for (i=0;i<arr.length;i++) {
-    if (arr[i].maker.toLowerCase() !== parametru.toLowerCase()) {
+    if (arr[i].maker !== parametru) {
         nou.push(arr[i]);
-        pozitie = arr.indexOf(arr[i]);
+        // pozitie = arr.indexOf(arr[i]);
     }
     // if(arr.indexOf(arr[i]) !== parametru) {
     //     nou.push(arr[i]);
@@ -130,4 +130,11 @@ function getCarByMaker (arr,maker) {
 
     return x;
 
+}
+
+function updateCar(arr,masina) {
+
+    arr = eliminateCar(arr,masina.maker);
+    arr.push(masina);
+    return arr;
 }

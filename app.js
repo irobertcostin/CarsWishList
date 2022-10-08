@@ -70,6 +70,8 @@ deletion.addEventListener("click", () => {
     cars = eliminateCar(cars,obiectSelectat);
 
     populateTable(cars);
+
+    resetRows();
 })
 
 edit.addEventListener("click", ()=> {
@@ -82,8 +84,12 @@ edit.addEventListener("click", ()=> {
     }
 
 
+    
+    cars = updateCar(cars,masina);
 
+    populateTable(cars);
 
+    resetRows();
 
 
 })
