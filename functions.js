@@ -138,3 +138,20 @@ function updateCar(arr,masina) {
     arr.push(masina);
     return arr;
 }
+
+function searchCarByMaker (arr,maker){
+
+    let rezultat = [];
+
+    for (i=0;i<arr.length;i++){
+
+        if (arr[i].maker.includes(maker)){
+            rezultat.push(arr[i]);
+        }
+
+    }
+
+    return rezultat;
+
+
+}

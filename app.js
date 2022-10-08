@@ -19,11 +19,10 @@ let model = document.querySelector(".model");
 let engine = document.querySelector(".engine");
 let fuel = document.querySelector(".fuel");
 
-
-
-
-
 //search
+let search = document.querySelector(".search")
+
+
 
 btnCreate.addEventListener("click", () => {
 
@@ -94,5 +93,12 @@ edit.addEventListener("click", ()=> {
 
 })
 
+
+search.addEventListener("click", () =>{
+
+    populateTable(searchCarByMaker(cars,maker.value));
+
+
+})
 
 populateTable(cars);
